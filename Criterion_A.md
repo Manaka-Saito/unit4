@@ -24,27 +24,40 @@ Lastly, I proposed to use SQLite for databases. SQLite is free to use for everyo
 
 ## Success Criteria 
 
-Admin
+### Admin
 1. The solution allows the cafeteria workers to receive email notifications of the summary of the week including the statistics of the amount of food waste and comments from students.
- -> ```** [Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school”]```
+   
+ -> ```** [Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school”]```  
 
 2. The solution allows the cafeteria workers to see the statistics of the attendance, student preferences for each dish, and amount of food waste.
- -> ```**[Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school” ]```
+   
+ -> ```**[Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school” ]```  
 
 3. The solution allows the cafeteria workers to upload photos and names of today's dishes.
- -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```
-Student
-4. The solution provides a feedback and rating system for the dish. 
- -> ```**[Issue solved**: “she emphasizes that the current system doesn’t ask for student’s input and preference in terms of food selection” ]```
-5. The solution displays today’s  meals with explanations.
- -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```
-6. The system lets students indicate if they plan to attend each meal.
- ->```**[Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school” ]```
-7. The solution displays how long the queue is and estimation of the waiting time.
- ->```**[Issue solved**: “Hence, it becomes impossible for A.S to estimate her waiting time unless she goes to the cafeteria and waits”  ]```
-For Everyone
+   
+ -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```  
+ 
+### Student
+4. The solution provides a feedback and rating system for the dish.  
+
+ -> ```**[Issue solved**: “she emphasizes that the current system doesn’t ask for student’s input and preference in terms of food selection” ]```  
+ 
+5. The solution displays today’s  meals with explanations.  
+
+ -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```  
+ 
+6. The system lets students indicate if they plan to attend each meal.  
+
+ ->```**[Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school” ]```  
+ 
+7. The solution displays how long the queue is and estimation of the waiting time.  
+
+ ->```**[Issue solved**: “Hence, it becomes impossible for A.S to estimate her waiting time unless she goes to the cafeteria and waits”  ]```  
+ 
+### For Everyone
 
 8. Sign in/Log in Systems to distinguish between students and faculty, and cafeteria workers.
+
  -> ```**[Issue solved**: “current system doesn’t ask for student’s input and preference in terms of food selection” ]```
 
 [^1]: Desai, J. (2023, December 27). Web application vs Desktop Application: Pros and cons. Positiwise. https://positiwise.com/blog/web-application-vs-desktop-application-pros-and-cons#Cross-Platform_Compatibility
