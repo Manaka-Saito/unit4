@@ -33,7 +33,7 @@
    
     -> ```**[Issue solved**: "Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for. Furthermore, the data is recorded in tables that are not easily interpreted." ]```  
 
-3. The solution allows the cafeteria workers to upload photos and names of today's dishes.
+3. The solution allows the cafeteria workers to upload today's dishes and its details such as the dish category and meal time that they are served.
    
     -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course, which is sometimes inaccurate.” ]```  
  
