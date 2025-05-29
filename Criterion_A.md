@@ -2,11 +2,11 @@
 
 ## Problem Definition
 
-   My client, A.S., is a Japanese high school student frustrated with the current meal providing system. Specifically, the school serves three meals a day with 3 options in each meal: main course, noodles stall and special menu. The students receive notification about the menu of each day via email. However, A.S finds reading the emails inconvenient during the days as it got mixed up with her other school-related emails and the format is also not quite user-friendly – instead of displaying the all available options, the current menu only showcases the main course.  
+   My client, A.S., is a Japanese high school student frustrated with the current meal providing system. Specifically, the school serves three meals a day with 3 options in each meal: main course, noodles stall and special menu. The students receive notification about the menu of each day via email. However, A.S finds reading the emails inconvenient during the days as it got mixed up with her other school-related emails and the format is also not quite user-friendly – instead of displaying the all available options, the current menu only showcases the main course, which is sometimes inaccurate. 
 
    Secondly, the school is also known for having a lengthy queue during mealtimes due to the new salad bar area implemented. Hence, it becomes impossible for A.S to estimate her waiting time unless she goes to the cafeteria and waits, which poses a challenge of productivity that she wants to resolve.  
 
-   Last but not least, she emphasizes that the current system doesn’t ask for student’s input and preference in terms of food selection. Therefore, not only does the cafeteria not have a comprehensive perspective on what sort of food students currently prefer, but it also raises a challenge of an excessive amount of leftovers. Altogether, these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school.
+   Last but not least, she emphasizes that the current system doesn’t ask for student’s input and preference in terms of food selection. Therefore, not only does the cafeteria not have a comprehensive perspective on what sort of food students currently prefer, but it also raises a challenge of an excessive amount of leftovers. Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for. Furthermore, the data is recorded in tables that are not easily interpreted. Altogether, these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school.
 
 [See Appendix A for client consultation proof.](IA_Appendix)
 
@@ -27,15 +27,15 @@
 ### Admin
 1. The solution allows the cafeteria workers to receive email notifications of the summary of the week including the statistics of the amount of food waste and comments from students.
    
- -> ```** [Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school”]```  
+ -> ```** [Issue solved**: “Therefore, not only does the cafeteria not have a comprehensive perspective on what sort of food students currently prefer, but it also raises a challenge of an excessive amount of leftovers. Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for.”]```  
 
-2. The solution allows the cafeteria workers to see the statistics of the attendance, student preferences for each dish, and amount of food waste.
+2. The solution allows the cafeteria workers to see the visualized statistics of the attendance, student preferences for each dish, and amount of food waste.
    
- -> ```**[Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school” ]```  
+ -> ```**[Issue solved**: "Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for. Furthermore, the data is recorded in tables that are not easily interpreted." ]```  
 
 3. The solution allows the cafeteria workers to upload photos and names of today's dishes.
    
- -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```  
+ -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course, which is sometimes inaccurate.” ]```  
  
 ### Student
 4. The solution provides a feedback and rating system for the dish.  
