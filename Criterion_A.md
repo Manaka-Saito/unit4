@@ -42,7 +42,7 @@
 
     -> ```**[Issue solved**: “she emphasizes that the current system doesn’t ask for student’s input and preference in terms of food selection” ]```  
  
-5. The solution displays today’s  meals with explanations.  
+5. The solution displays today’s  meals with explanations such as images, categories, name, served time and date.
 
     -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```  
  
