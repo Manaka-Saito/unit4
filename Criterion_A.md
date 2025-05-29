@@ -25,7 +25,7 @@
 ## Success Criteria 
 
 ### Admin
-1. The solution allows the cafeteria workers to receive email notifications of the summary of the week including the statistics of the amount of food waste and comments from students.
+1. The solution allows the cafeteria workers to receive email notifications of the summary of the week including the statistics of the amount of food waste and attendance rate, and feedbacks from students.
    
     -> ```** [Issue solved**: “Therefore, not only does the cafeteria not have a comprehensive perspective on what sort of food students currently prefer, but it also raises a challenge of an excessive amount of leftovers. Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for.”]```  
 
