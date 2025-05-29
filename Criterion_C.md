@@ -23,6 +23,22 @@
 - SQLite
 - werkzeug.utils (secure_filename())
 
+### References
+
+### [Codehal](https://www.youtube.com/@codehal)
+Codehal is a youtube channel that explains the basic HTML and CSS skills.
+
+### [ionicons](https://ionic.io/ionicons/usage)
+ionicons is a open source of icons that can be used in HTML and CSS.
+
+### [W3Schools](https://www.w3schools.com/css/)
+W3Schools provides basic information and sample code of html, css, and javascript with preview.
+
+### [Bootstrap](https://getbootstrap.jp/docs/4.1/components/buttons/)
+Bootstrap provides front-end framework that allows the visual to be consistent.
+
+### [freeCodeCamp](https://www.youtube.com/@freecodecamp)
+freeCodeCamp is a youtube channel that provides tutorials for openCV, especially how to detect human's body. 
 
 ### **1. Posting Menu with Data Filtering**  
 
