@@ -40,9 +40,11 @@ Fig 8. *Database of `food_waste`*
 
 <img width="1000" alt="Screenshot 2025-05-29 at 13 40 06" src="https://github.com/user-attachments/assets/5a813a36-1d7a-4844-bc54-f0f878b81d0f" />  
 
-Fig 9. *Flow chart of `post_menu` function*
+Fig 9. *Flow chart of `post_menu` function*  
 
-<img width="1000" alt="Screenshot 2025-05-29 at 13 58 10" src="https://github.com/user-attachments/assets/6c8284b6-ae5e-4015-afe9-64cc779c17d7" />  
+<img width="512" alt="Screenshot 2025-05-29 at 17 18 42" src="https://github.com/user-attachments/assets/0affbe57-2609-4f99-8b6d-4509e55e9550" />  
 
-Fig 10. *Flow chart of `get_dishes` function*
+Fig 10. *Flow chart of `get_dishes` function*  
+
+
 
