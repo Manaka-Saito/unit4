@@ -73,7 +73,7 @@ Another command *daily_menu* creates a table called *daily_menu* with the column
 Initially, there was only *daily_menu* table with the columns that *dish* has. However, since it requires admin users to input all details every time they post a menu for a day, there is a lot of redundancy and inefficiency. Moreover, the table was not the easiest table to handle since it quickly became lengthy with relatively many columns. For better user experience and maintainability, I decided to create two separate tables, and relating it from one table to another, *daily_menu* to *dish*.
  
 **Conditional Statement/datetime/HTTP Methods**
-I developed a function *post_menu* to achieve a dynamic menu posting system and lessen manual errors.  
+I developed a function *post_menu* to achieve a dynamic menu posting system and lessen manual errors and improve usability.   
 
 ```.py
 @app.route('/admin/menu', methods=['GET', 'POST'])
@@ -115,7 +115,6 @@ When a *POST* request is received, it retrieves the HTML form input, *dish_id* a
 **Data Filtering/Dictionary**  
 While *post_menu* functions to render template and insert data into a data table or display error otherwise, I developed *get_dishes* function, a function that is triggered when *fetch()* is called from JavaScript,  to clinch usability in future and keep human error less system. *get_dishes* collaborate with JavaScript to filter and specify dish name options in dropdown based on user's selection in *meal_time* and/or *category*. 
 
-```.py
 @app.route('/get_dishes')
 def get_dishes():
 
@@ -152,9 +151,65 @@ def get_dishes():
    #tuple for id and dish name
    dish_data = [{'id': d[0], 'name': d[1]} for d in dishes]
    return jsonify(dish_data)
-```
+
 Firstly, it retrieves selected *time* and *type* from URL. Then, it initializes a connection with *my_caf.db*. A variable *query* holds a foundation of query, and *conditions* is a tuple that stores any filters.  
 
 The SQL query is modified utilising conditional statements, allowing users to select either one of filters or both. With modified *query* and *conditions*, data in *dishes* are searched and stores retrieved data that fulfills conditions. By using a loop that iterate through *dishes*, it stores each element into a dictionary. A dictionary is *dish_data* with keys, *id* and *name* and stores corresponding data as items.  I chose a dictionary because the code readability is improved and rather than getting intended data using indexes which are easily counted wrong, it reduces risk of making mistakes when getting intended data using keys. 
 
 Finally the function returns *dish_data* that is converted into JSON format to JavaScript.  
+
+Lastly, for the sake of responsiveness to the change in filters, the event-driven JavaScript function is an adequate means to update dish options dropdown menu. I decided developed a function *updateDishOptions* which interacts with Flask function *get_dishes*. 
+```.html
+<script>
+   function updateDishOptions() {
+       //getting values selected
+       const time = document.getElementById('meal_time').value;
+       const dishType = document.getElementById('category').value;
+       //getting target select field == Dish Name field
+       const dishSelect = document.getElementById('dish_id');
+
+
+       const currentSelect = dishSelect.value;
+       //resetting the Select Dish
+       dishSelect.innerHTML = '<option value="">Select Dish</option>';
+
+
+  
+       let url = '/get_dishes';
+       //stores query parameters
+       const params = [];
+
+
+       if (time)
+           params.push(`time=${encodeURIComponent(time)}`);
+       if (dishType)
+           params.push(`type=${encodeURIComponent(dishType)}`);
+       if (params.length > 0)
+           url += '?' + params.join('&');
+
+
+       //fetch dishes from get_dishes func in main.py
+       fetch(url)
+           .then(response => response.json())
+           .then(data => {
+               //make sure it is not duplicated
+               const addedIds = new Set();
+               data.forEach(dish => {
+                   if (!addedIds.has(dish.id)) {
+                       const option = document.createElement('option');
+                       option.value = dish.id;
+                       option.textContent = dish.name;
+                       dishSelect.appendChild(option);
+                       addedIds.add(dish.id);
+                   }
+               });
+           })
+           //display error
+           .catch(error => {
+               console.error('Error fetching dishes:', error);
+           });
+   }
+```  
+First, it reads current values from two dropdowns, *meal_time* and *category*. Then, it gets target select field *dishSelect*. After clearing the dropdown, it generates URL by updating by getting the *time* and *dishType.* Then, it sends a GET request to the URL composed, The use of *Fetch* and promise ensures UI responsiveness. It also ensures that options displayed under *dishSelect* are not duplicated. Then, for loops of *dish* are done to get each dishes *id* and *name*. Because the data tables *dish* and *daily_menu* shares *dish_id*, it is the most convenient and efficient to store each dish as *id* so it is faster and easier to access elements in each table. However, considering the usability, it is easier to see dish options with their names rather than numbers, therefore by defining *dish.id* as a *value* of options, and *dish.name* as a *textContent* of options, it handles both UI and Flaks effectively. *.catch* handles any errors that occurs during *fetch* so that it can deal with unexpected errors that could occur. Especially as the website is aimed to be used by numerous people via variable types of devices, possibly with different servers, this error handling is significant.  
+
+Overall, the functionality of the posting menu is developed using all HTML, JavaScript and Flask with a variety of techniques such as iteration, datetime, conditional statements and more. 
