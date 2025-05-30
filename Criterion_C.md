@@ -114,7 +114,7 @@ When a *POST* request is received, it retrieves the HTML form input, *dish_id* a
 
 **Data Filtering/Dictionary**  
 While *post_menu* functions to render template and insert data into a data table or display error otherwise, I developed *get_dishes* function, a function that is triggered when *fetch()* is called from JavaScript,  to clinch usability in future and keep human error less system. *get_dishes* collaborate with JavaScript to filter and specify dish name options in dropdown based on user's selection in *meal_time* and/or *category*. 
-
+```.py
 @app.route('/get_dishes')
 def get_dishes():
 
@@ -151,7 +151,7 @@ def get_dishes():
    #tuple for id and dish name
    dish_data = [{'id': d[0], 'name': d[1]} for d in dishes]
    return jsonify(dish_data)
-
+```
 Firstly, it retrieves selected *time* and *type* from URL. Then, it initializes a connection with *my_caf.db*. A variable *query* holds a foundation of query, and *conditions* is a tuple that stores any filters.  
 
 The SQL query is modified utilising conditional statements, allowing users to select either one of filters or both. With modified *query* and *conditions*, data in *dishes* are searched and stores retrieved data that fulfills conditions. By using a loop that iterate through *dishes*, it stores each element into a dictionary. A dictionary is *dish_data* with keys, *id* and *name* and stores corresponding data as items.  I chose a dictionary because the code readability is improved and rather than getting intended data using indexes which are easily counted wrong, it reduces risk of making mistakes when getting intended data using keys. 
