@@ -23,40 +23,36 @@
    Lastly, I proposed to use SQLite for databases. SQLite is free to use for everyone unlike MySQL or MongoDB. This allows clients to allocate money on different factors or save it especially when the client is a high school student. [^5]
 
 ## Success Criteria 
-
 ### Admin
-1. The solution allows the cafeteria workers to receive email notifications of the summary of the week including the statistics of the amount of food waste and attendance rate, and feedbacks from students.
+1. The solution allows the cafeteria workers to see the feedback from students and visualize statistics of the attendance, student preferences for each dish, and amount of food waste.
    
-    -> ```** [Issue solved**: “Therefore, not only does the cafeteria not have a comprehensive perspective on what sort of food students currently prefer, but it also raises a challenge of an excessive amount of leftovers. Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for.”]```  
+    -> ``` [Issue solved: “Therefore, not only does the cafeteria not have a comprehensive perspective on what sort of food students currently prefer, but it also raises a challenge of an excessive amount of leftovers. Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for. Furthermore, the data is recorded in tables that are not easily interpreted.” ]```  
 
-2. The solution allows the cafeteria workers to see the visualized statistics of the attendance, student preferences for each dish, and amount of food waste.
+2. The solution allows the cafeteria workers to upload today's dishes and its details such as the dish category and meal time that they are served.
    
-    -> ```**[Issue solved**: "Although the cafeteria staff logs leftovers quantities daily, the process is manual, hence error-prone, and data is not easily accessible for. Furthermore, the data is recorded in tables that are not easily interpreted." ]```  
-
-3. The solution allows the cafeteria workers to upload today's dishes and its details such as meal time that dishes are served.
-   
-    -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course, which is sometimes inaccurate.” ]```  
+    -> ```**[Issue solved: “instead of displaying the all available options, the current menu only showcases the main course, which is sometimes inaccurate” ]
+Student```  
  
 ### Student
-4. The solution provides a feedback and rating system for the dish.  
+3. The solution provides a feedback system for the dish.  
 
     -> ```**[Issue solved**: “she emphasizes that the current system doesn’t ask for student’s input and preference in terms of food selection” ]```  
  
-5. The solution displays today’s  meals with explanations such as images, categories, name, served time and date.
+4. The solution displays today’s  meals with explanations such as images, categories, name and served time.
 
     -> ```**[Issue solved**: “instead of displaying the all available options, the current menu only showcases the main course” ]```  
  
-6. The system lets students indicate if they plan to attend each meal.  
+5. The system lets students indicate if they plan to attend each meal.  
 
     ->```**[Issue solved**: “these challenges underscores the need for a more interactive and comprehensive solution to enhance the dining experience at A.S’s school” ]```  
  
-7. The solution displays how long the queue is and estimation of the waiting time.  
+6. The solution displays how long the queue is and estimation of the waiting time.  
 
     ->```**[Issue solved**: “Hence, it becomes impossible for A.S to estimate her waiting time unless she goes to the cafeteria and waits”  ]```  
  
 ### For Everyone
 
-8. Sign in/Log in Systems to distinguish between students and faculty, and cafeteria workers.
+7. Sign in/Log in Systems to distinguish between students and faculty, and cafeteria workers.
 
     -> ```**[Issue solved**: “current system doesn’t ask for student’s input and preference in terms of food selection” ]```
 
