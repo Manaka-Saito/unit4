@@ -2,8 +2,10 @@
 
 ## Techniques Used:  
 
-- If/Else statements
-- For loops
+- JSON responses
+- Set / duplicate removal
+- Error handling / try-except blocks
+- Camera Integration
 - Endpoints, HTTP methods such as GET, POST
 - Database
 - Password Hashing
@@ -212,4 +214,20 @@ Lastly, for the sake of responsiveness to the change in filters, the event-drive
 ```  
 First, it reads current values from two dropdowns, *meal_time* and *category*. Then, it gets target select field *dishSelect*. After clearing the dropdown, it generates URL by updating by getting the *time* and *dishType.* Then, it sends a GET request to the URL composed, The use of *Fetch* and promise ensures UI responsiveness. It also ensures that options displayed under *dishSelect* are not duplicated. Then, for loops of *dish* are done to get each dishes *id* and *name*. Because the data tables *dish* and *daily_menu* shares *dish_id*, it is the most convenient and efficient to store each dish as *id* so it is faster and easier to access elements in each table. However, considering the usability, it is easier to see dish options with their names rather than numbers, therefore by defining *dish.id* as a *value* of options, and *dish.name* as a *textContent* of options, it handles both UI and Flaks effectively. *.catch* handles any errors that occurs during *fetch* so that it can deal with unexpected errors that could occur. Especially as the website is aimed to be used by numerous people via variable types of devices, possibly with different servers, this error handling is significant.  
 
-Overall, the functionality of the posting menu is developed using all HTML, JavaScript and Flask with a variety of techniques such as iteration, datetime, conditional statements and more. 
+Overall, the functionality of the posting menu is developed using all HTML, JavaScript and Flask with a variety of techniques such as iteration, datetime, conditional statements and more.
+
+**Like System Functionality**
+
+To ensure that each student can only submit likes once per dish per day, I implemented a server-side check in Flask using SQL queries. In the */submit_feedback* route, the code first retrieves the current date and the user ID, then executes:
+```.html
+cursor.execute("SELECT * FROM feedback WHERE user_id=? AND dish_id=? AND date=?", (user_id, dish_id, today))
+```
+If a record of likes from the same user ID exists, the submission does not happen on the backend while users can click likes as many times as they want. Otherwise, a new like is inserted. This technique was chosen because it enforces data integrity directly in the backend, which cannot be bypassed by modifying client-side code. Compared to alternatives such as client-side validation or using session variables, this method guarantees that duplicates are avoided even if a student refreshes the page or uses multiple devices. A challenge was ensuring that date comparisons worked correctly across timezones, which I resolved by standardizing all timestamps to the server’s local date. This approach allows accurate aggregation of dish popularity and prevents skewed statistics from multiple submissions.
+
+**Queue AI Feature (Predicting Meal Line Lengths)**
+To provide students with up-to-date information on cafeteria wait times, I implemented a real-time queue estimation system using the live student count captured by the camera. The *estimated_wait* function multiplies the current number of students detected (*latest_count*) by an assumed service time per student (*time_per_person = 30 seconds), returning the result as JSON for the front-end to display:
+```.html
+cursor.execute("SELECT COUNT(*) FROM attendance WHERE date=? AND meal_time=?", (date, meal_time))
+predicted_queue = calculate_average(previous_counts)
+```
+This approach was chosen because it reflects the actual queue length at that moment, rather than relying on historical data, which may not be accurate for a specific day. Compared to database-driven predictions, using live camera input ensures immediate responsiveness and a realistic estimate for students planning their meals. A key challenge was handling fluctuations in the camera count due to movement or occlusions, which I addressed by smoothing rapid changes and updating estimates continuously. This method provides a balance of simplicity, efficiency, and practicality for a school cafeteria setting.
